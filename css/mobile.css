@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +38,7 @@ html {
     max-height: 5rem;
     display: grid;
     place-content: center;
-    background-color: #E03E3E;
+    background-color: #0a0a0a;
     color: white;
     border: none;
     border-end-start-radius: 2.5rem;
@@ -44,8 +46,9 @@ html {
 .content-name h1 {
     color: white;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: center;
+    font-family: 'Bungee Inline', cursive;
 }
 .container-nav {
     width: 100%;
@@ -57,30 +60,32 @@ html {
     margin: 0 auto;
 }
 .container-nav .content-nav:nth-child(1) {
-    width: 50%;
+    width: 60%;
     max-width: 11.5rem;
-    height: 2.5rem;
-    max-height: 3rem;
+    height: 3.5rem;
+    max-height: 6rem;
     display: grid;
     place-items: center;
-    background-color: #E03E3E;
+    background-color: #0a0a0a;
     color: white;
     border-end-start-radius: 1rem;
     border-end-end-radius: 1rem;
     border-start-end-radius: 1rem;
+    font-family: 'Bungee Inline', cursive;
 }
 .container-nav .content-nav:nth-child(2) {
-    width: 50%;
+    width: 60%;
     max-width: 11.5rem;
-    height: 2.5rem;
-    max-height: 3rem;
+    height: 3.5rem;
+    max-height: 6rem;
     display: grid;
     place-items: center;
-    background-color: #E03E3E;
+    background-color: #0a0a0a;
     color: white;
     border-start-start-radius: 1rem;
     border-end-start-radius: 1rem;
     border-start-end-radius: 1rem;
+    font-family: 'Bungee Inline', cursive;
 }
 
 .content-nav a {
@@ -88,7 +93,7 @@ html {
 }
 .content-nav a h3{
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
 }
 .container-warmup {
@@ -109,13 +114,13 @@ html {
     place-items: center;
     grid-template-rows: repeat(2, auto);
     margin: 0 auto;
-    border-start-start-radius: 3rem;
+    border-start-start-radius: 4rem;
 }
 .container-warmup-blur .circle {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    border: 1px solid #fff;
+    width: 170px;
+    height: 170px;
+    border: 1.5px solid #fff;
     color: #fff;
     margin: 50px auto;
     display: flex;
@@ -129,38 +134,45 @@ html {
     border-radius: 50%;
     z-index: -1;
     position: absolute;
-    width: 160px;
-    height: 160px;
-    left: calc(50% - 80px);
-    top: calc(50% - 80px);
-    background-color: #1d1d1d;
+    width: 220px;
+    height: 220px;
+    left: calc(50% - 109px);
+    top: calc(50% - 109px);
+    background-color: #0a0a0a;
 }
-
+.circle .stopwatch {
+    font-size: 1.8rem;
+    margin: 0 auto .5rem auto;
+}
 .seconds-sphere {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    left: calc(50% - 10px);
-    top: calc(50% - 10px);
+    left: calc(50% - 12px);
+    top: calc(50% - 15px);
     animation: rotacion 60s linear infinite;
     animation-play-state: paused;
+    transition: 100ms all ease;
 }
 
 @keyframes rotacion {
-	from { 	transform: rotate(-90deg) translateX(60px); }
-	to   {  transform: rotate(270deg) translateX(60px); }
+	0% { 	transform: rotate(-90deg) translateX(60px); background-color: white; }
+	95.5%   {  transform: rotate(257.85deg) translateX(60px); background-color: white;}
+        100% {transform: rotate(270deg) translateX(60px); background-color: #d4a413;} 
 }
-
 .buttons {
-    margin-top: 10px;
+    width: auto;
+    height: 2rem;
+    margin: 10px;
     display: inline-flex;
 }
 
 .paused {
-    height: 10px;
-    border-width: 5px 0 5px 10px;
+    width: 20px;
+    height: 20px;
+    border-width: 10px 0px 10px 20px;
     cursor: pointer;
     box-sizing: border-box;
     margin-left: 15px;
@@ -172,13 +184,13 @@ html {
 
 .running {
     border-style: double;
-    border-width: 0 0 0 10px;
+    border-width: 0 0 0 21.5px;
 }
 
 .stop {
     background-color: #fff;
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
 }
 
@@ -189,25 +201,27 @@ html {
 }
 
 .container-warmup-blur .content-warmup {
-    width: 100%;
+    width: 50%;
     height: 8rem;
     min-height: 6rem;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, auto);
     place-items: center;
     place-content: center;
-    margin: 40rem auto;
-    background-color: #E03E3E;
+    margin: 45rem auto;
+    background-color: transparent;
 }
 .content-warmup h2 {
     display: grid;
     place-content: center;
-    width: 100%;
+    width: 150%;
     height: 6rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    color: black;
+    color: #0a0a0a;
+    font-family: 'Bungee Inline', cursive;
+    border-block-end: .4rem solid #0a0a0a;
 }
 .content-warmup img {
     width: 5rem;
