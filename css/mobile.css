@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+.container {
+    width: 36rem;
+    min-width: 36rem;
+    min-height: 80rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: repeat(auto, auto);
+    background-color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+}
+.container .circle {
+    position: absolute;
+}
+.container .container-name {
+    width: 100%;
+    height: 5rem;
+    min-height: 5rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: right;
+}
+.container-name .content-name {
+    width: 21.5rem;
+    max-width: 21.5rem;
+    height: 5rem;
+    max-height: 5rem;
+    display: grid;
+    place-content: center;
+    background-color: #E03E3E;
+    color: white;
+    border: none;
+    border-end-start-radius: 2.5rem;
+}
+.content-name h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.container-nav {
+    width: 100%;
+    min-width: 36rem;
+    height: 10rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, auto);
+    margin: 0 auto;
+}
+.container-nav .content-nav:nth-child(1) {
+    width: 50%;
+    max-width: 11.5rem;
+    height: 2.5rem;
+    max-height: 3rem;
+    display: grid;
+    place-items: center;
+    background-color: #E03E3E;
+    color: white;
+    border-end-start-radius: 1rem;
+    border-end-end-radius: 1rem;
+    border-start-end-radius: 1rem;
+}
+.container-nav .content-nav:nth-child(2) {
+    width: 50%;
+    max-width: 11.5rem;
+    height: 2.5rem;
+    max-height: 3rem;
+    display: grid;
+    place-items: center;
+    background-color: #E03E3E;
+    color: white;
+    border-start-start-radius: 1rem;
+    border-end-start-radius: 1rem;
+    border-start-end-radius: 1rem;
+}
+
+.content-nav a {
+    text-decoration: none;
+}
+.content-nav a h3{
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.container-warmup {
+    width: 100%;
+    min-width: 36rem;
+    height: 58.5rem;
+    margin: 0 auto;
+    background-color: #d9d9d9;
+    background-image: ur('https://raw.githubusercontent.com/yofreee/workout/main/Xulian.gif');
+    border-start-start-radius: 3rem;
+    display: grid;
+}
+.container-warmup-blur {
+    width: 36rem;
+    height: 58.5rem;
+    backdrop-filter: blur(4px);
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(2, auto);
+    margin: 0 auto;
+    border-start-start-radius: 3rem;
+}
+.container-warmup-blur .circle {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle::before {
+    content: '';
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
+    background-color: #1d1d1d;
+}
+
+.seconds-sphere {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    animation: rotacion 60s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes rotacion {
+	from { 	transform: rotate(-90deg) translateX(60px); }
+	to   {  transform: rotate(270deg) translateX(60px); }
+}
+
+.buttons {
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.paused {
+    height: 10px;
+    border-width: 5px 0 5px 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-left: 15px;
+    border-color: transparent transparent transparent #fff;
+    transition: 100ms all ease;
+    will-change: border-width;
+    border-style: solid;
+}
+
+.running {
+    border-style: double;
+    border-width: 0 0 0 10px;
+}
+
+.stop {
+    background-color: #fff;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+}
+
+
+.container-warmup img {
+    width: 100%;
+    height: auto;
+}
+
+.container-warmup-blur .content-warmup {
+    width: 100%;
+    height: 8rem;
+    min-height: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
+    place-content: center;
+    margin: 40rem auto;
+    background-color: #E03E3E;
+}
+.content-warmup h2 {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+.content-warmup img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1.5rem;
+}
